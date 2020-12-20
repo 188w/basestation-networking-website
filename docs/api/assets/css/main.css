@@ -80,4 +80,21 @@ button, input, select, textarea {
 
 /**
  * * Address margins handled incorrectly in IE 6/7. */
-bod
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+ * * Links
+ * * ========================================================================== */
+/**
+ * * Address `outline` inconsistency between Chrome and other browsers. */
+a:focus {
+  outline: thin dotted;
+}
+a:active, a:hover {
+  outline: 0;
+}
+
+/**
+ * * Improve readability when focused 
