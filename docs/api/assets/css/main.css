@@ -97,4 +97,19 @@ a:active, a:hover {
 }
 
 /**
- * * Improve readability when focused 
+ * * Improve readability when focused and also mouse hovered in all browsers. */
+/* ==========================================================================
+ * * Typography
+ * * ========================================================================== */
+/**
+ * * Address font sizes and margins set differently in IE 6/7.
+ * * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * * and Chrome. */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  m
