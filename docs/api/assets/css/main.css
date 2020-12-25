@@ -168,3 +168,26 @@ hr {
 
 /**
  * * Address styling not present in IE 6/7/8/9. */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * * Address margins set differently in IE 6/7. */
+p, pre {
+  margin: 1em 0;
+}
+
+/**
+ * * Correct font family set oddly in IE 6, Safari 4/5, and Chrome. */
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  _font-family: "courier new", monospace;
+  font-size: 1em;
+}
+
+/**
+ * * Improve readability of pre-formatted text in all browsers. */
+pre {
+  white-space: p
