@@ -190,4 +190,30 @@ code, kbd, pre, samp {
 /**
  * * Improve readability of pre-formatted text in all browsers. */
 pre {
-  white-space: p
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/**
+ * * Address CSS quotes not supported in IE 6/7. */
+q {
+  quotes: none;
+}
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/**
+ * * Address `quotes` property not supported in Safari 4. */
+/**
+ * * Address inconsistent and variable font size in all browsers. */
+small {
+  font-size: 80%;
+}
+
+/**
+ * * Prevent `sub` and `sup` affecting `line-height` in all browsers. */
+sub {
+  font
