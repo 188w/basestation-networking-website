@@ -216,4 +216,26 @@ small {
 /**
  * * Prevent `sub` and `sup` affecting `line-height` in all browsers. */
 sub {
-  font
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+ * * Lists
+ * * ========================================================================== */
+/**
+ * * Address margins set differently in IE
