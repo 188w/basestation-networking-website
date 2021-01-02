@@ -322,4 +322,22 @@ legend {
  * * 3. Improve appearance and consistency in all browsers. */
 button, input, select, textarea {
   font-size: 100%;
-  /* 1 
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+}
+
+/* 3 */
+/**
+ * * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * * the UA stylesheet. */
+button, input {
+  line-height: normal;
+}
+
+/**
+ * * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * * All other form control elements do not inherit `text-transform` va
