@@ -409,4 +409,14 @@ input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-se
 }
 
 /**
- * * 1. Address `appearance` set to `searchf
+ * * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ * *    (include `-moz` to future-proof). */
+/**
+ * * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * * on OS X. */
+/**
+ * * Remove inner padding and border in Firefox 3+. */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0
