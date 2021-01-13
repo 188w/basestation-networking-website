@@ -454,4 +454,12 @@ ul.tsd-descriptions > li > :first-child > :first-child,
 .col-6 > :first-child > :first-child,
 .col-5 > :first-child > :first-child,
 .col-4 > :first-child > :first-child,
-.col-3 > :first-child > :first-ch
+.col-3 > :first-child > :first-child,
+.col-2 > :first-child > :first-child,
+.col-1 > :first-child > :first-child,
+ul.tsd-descriptions > li > :first-child > :first-child > :first-child,
+.tsd-panel > :first-child > :first-child > :first-child,
+.col > :first-child > :first-child > :first-child,
+.col-11 > :first-child > :first-child > :first-child,
+.col-10 > :first-child > :first-child > :first-child,
+.col-9 > :first-child > :first-child > :fi
