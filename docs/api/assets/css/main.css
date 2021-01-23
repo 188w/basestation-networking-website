@@ -642,4 +642,19 @@ ul.tsd-descriptions > li > :last-child > :last-child > :last-child,
   margin: 0 3px 2px 0;
   background-image: url(../images/icons.png);
 }
-@media (-webkit-min-device-
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .tsd-kind-icon:before {
+    background-image: url(../images/icons@2x.png);
+    background-size: 238px 204px;
+  }
+}
+
+.tsd-signature.tsd-kind-icon:before {
+  background-position: 0 -153px;
+}
+
+.tsd-kind-object-literal > .tsd-kind-icon:before {
+  background-position: 0px -17px;
+}
+.tsd-kind-object-literal.tsd-is-protected > .tsd-kind-icon:before {
+  backgr
