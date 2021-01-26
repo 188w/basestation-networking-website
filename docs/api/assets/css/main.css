@@ -657,4 +657,20 @@ ul.tsd-descriptions > li > :last-child > :last-child > :last-child,
   background-position: 0px -17px;
 }
 .tsd-kind-object-literal.tsd-is-protected > .tsd-kind-icon:before {
-  backgr
+  background-position: -17px -17px;
+}
+.tsd-kind-object-literal.tsd-is-private > .tsd-kind-icon:before {
+  background-position: -34px -17px;
+}
+
+.tsd-kind-class > .tsd-kind-icon:before {
+  background-position: 0px -34px;
+}
+.tsd-kind-class.tsd-is-protected > .tsd-kind-icon:before {
+  background-position: -17px -34px;
+}
+.tsd-kind-class.tsd-is-private > .tsd-kind-icon:before {
+  background-position: -34px -34px;
+}
+
+.tsd-kind-class.tsd-has-type-parameter > .tsd-kind-icon:before
