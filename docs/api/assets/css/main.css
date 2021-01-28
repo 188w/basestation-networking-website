@@ -699,4 +699,21 @@ ul.tsd-descriptions > li > :last-child > :last-child > :last-child,
 .tsd-kind-interface.tsd-has-type-parameter.tsd-is-protected > .tsd-kind-icon:before {
   background-position: -17px -85px;
 }
-.tsd-kind-interface.tsd-has-type-parameter.tsd-is-private > .tsd-kind-icon:b
+.tsd-kind-interface.tsd-has-type-parameter.tsd-is-private > .tsd-kind-icon:before {
+  background-position: -34px -85px;
+}
+
+.tsd-kind-namespace > .tsd-kind-icon:before {
+  background-position: 0px -102px;
+}
+.tsd-kind-namespace.tsd-is-protected > .tsd-kind-icon:before {
+  background-position: -17px -102px;
+}
+.tsd-kind-namespace.tsd-is-private > .tsd-kind-icon:before {
+  background-position: -34px -102px;
+}
+
+.tsd-kind-module > .tsd-kind-icon:before {
+  background-position: 0px -102px;
+}
+.tsd-kind-module.
