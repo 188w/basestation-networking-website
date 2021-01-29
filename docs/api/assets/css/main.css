@@ -716,4 +716,18 @@ ul.tsd-descriptions > li > :last-child > :last-child > :last-child,
 .tsd-kind-module > .tsd-kind-icon:before {
   background-position: 0px -102px;
 }
-.tsd-kind-module.
+.tsd-kind-module.tsd-is-protected > .tsd-kind-icon:before {
+  background-position: -17px -102px;
+}
+.tsd-kind-module.tsd-is-private > .tsd-kind-icon:before {
+  background-position: -34px -102px;
+}
+
+.tsd-kind-enum > .tsd-kind-icon:before {
+  background-position: 0px -119px;
+}
+.tsd-kind-enum.tsd-is-protected > .tsd-kind-icon:before {
+  background-position: -17px -119px;
+}
+.tsd-kind-enum.tsd-is-private > .tsd-kind-icon:before {
+  b
