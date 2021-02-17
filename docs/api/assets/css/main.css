@@ -794,4 +794,14 @@ ul.tsd-descriptions > li > :last-child > :last-child > :last-child,
 .tsd-kind-variable.tsd-parent-kind-class.tsd-is-protected.tsd-is-inherited > .tsd-kind-icon:before {
   background-position: -102px -0px;
 }
-.tsd-kind-variable.tsd
+.tsd-kind-variable.tsd-parent-kind-class.tsd-is-private > .tsd-kind-icon:before {
+  background-position: -119px -0px;
+}
+.tsd-kind-variable.tsd-parent-kind-enum > .tsd-kind-icon:before {
+  background-position: -170px -0px;
+}
+.tsd-kind-variable.tsd-parent-kind-enum.tsd-is-protected > .tsd-kind-icon:before {
+  background-position: -187px -0px;
+}
+.tsd-kind-variable.tsd-parent-kind-enum.tsd-is-private > .tsd-kind-icon:before {
+  background-pos
