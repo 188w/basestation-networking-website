@@ -889,4 +889,18 @@ ul.tsd-descriptions > li > :last-child > :last-child > :last-child,
 .tsd-kind-get-signature.tsd-parent-kind-interface > .tsd-kind-icon:before {
   background-position: -204px -17px;
 }
-.tsd-kind-get-signature.tsd-parent-kind-interface.tsd-is-inherited > .tsd-kind-icon
+.tsd-kind-get-signature.tsd-parent-kind-interface.tsd-is-inherited > .tsd-kind-icon:before {
+  background-position: -221px -17px;
+}
+
+.tsd-kind-set-signature > .tsd-kind-icon:before {
+  background-position: -136px -34px;
+}
+.tsd-kind-set-signature.tsd-is-protected > .tsd-kind-icon:before {
+  background-position: -153px -34px;
+}
+.tsd-kind-set-signature.tsd-is-private > .tsd-kind-icon:before {
+  background-position: -119px -34px;
+}
+.tsd-kind-set-signature.tsd-parent-kind-class > .tsd-kind-icon:before {
+  background-position: -51
