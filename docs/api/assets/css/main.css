@@ -923,4 +923,18 @@ ul.tsd-descriptions > li > :last-child > :last-child > :last-child,
 .tsd-kind-set-signature.tsd-parent-kind-enum.tsd-is-protected > .tsd-kind-icon:before {
   background-position: -187px -34px;
 }
-.tsd-kind-set-signature.tsd-parent-kind-enum.tsd-is-private > .tsd-kind-icon:bef
+.tsd-kind-set-signature.tsd-parent-kind-enum.tsd-is-private > .tsd-kind-icon:before {
+  background-position: -119px -34px;
+}
+.tsd-kind-set-signature.tsd-parent-kind-interface > .tsd-kind-icon:before {
+  background-position: -204px -34px;
+}
+.tsd-kind-set-signature.tsd-parent-kind-interface.tsd-is-inherited > .tsd-kind-icon:before {
+  background-position: -221px -34px;
+}
+
+.tsd-kind-accessor > .tsd-kind-icon:before {
+  background-position: -136px -51px;
+}
+.tsd-kind-accessor.tsd-is-protected > .tsd-kind-icon:before {
+  background-
