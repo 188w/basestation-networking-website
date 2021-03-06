@@ -957,4 +957,16 @@ ul.tsd-descriptions > li > :last-child > :last-child > :last-child,
 .tsd-kind-accessor.tsd-parent-kind-class.tsd-is-private > .tsd-kind-icon:before {
   background-position: -119px -51px;
 }
-.tsd-kind-accessor.tsd-parent-kind-enum > .tsd-kind-ico
+.tsd-kind-accessor.tsd-parent-kind-enum > .tsd-kind-icon:before {
+  background-position: -170px -51px;
+}
+.tsd-kind-accessor.tsd-parent-kind-enum.tsd-is-protected > .tsd-kind-icon:before {
+  background-position: -187px -51px;
+}
+.tsd-kind-accessor.tsd-parent-kind-enum.tsd-is-private > .tsd-kind-icon:before {
+  background-position: -119px -51px;
+}
+.tsd-kind-accessor.tsd-parent-kind-interface > .tsd-kind-icon:before {
+  background-position: -204px -51px;
+}
+.tsd-kind-accessor.tsd-parent-kind-inter
