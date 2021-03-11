@@ -992,3 +992,15 @@ ul.tsd-descriptions > li > :last-child > :last-child > :last-child,
   background-position: -85px -68px;
 }
 .tsd-kind-function.tsd-parent-kind-class.tsd-is-protected.tsd-is-inherited > .tsd-kind-icon:before {
+  background-position: -102px -68px;
+}
+.tsd-kind-function.tsd-parent-kind-class.tsd-is-private > .tsd-kind-icon:before {
+  background-position: -119px -68px;
+}
+.tsd-kind-function.tsd-parent-kind-enum > .tsd-kind-icon:before {
+  background-position: -170px -68px;
+}
+.tsd-kind-function.tsd-parent-kind-enum.tsd-is-protected > .tsd-kind-icon:before {
+  background-position: -187px -68px;
+}
+.tsd-kind-function.tsd-pare
