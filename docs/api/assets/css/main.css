@@ -1016,4 +1016,16 @@ ul.tsd-descriptions > li > :last-child > :last-child > :last-child,
 .tsd-kind-method > .tsd-kind-icon:before {
   background-position: -136px -68px;
 }
-.tsd-kind-met
+.tsd-kind-method.tsd-is-protected > .tsd-kind-icon:before {
+  background-position: -153px -68px;
+}
+.tsd-kind-method.tsd-is-private > .tsd-kind-icon:before {
+  background-position: -119px -68px;
+}
+.tsd-kind-method.tsd-parent-kind-class > .tsd-kind-icon:before {
+  background-position: -51px -68px;
+}
+.tsd-kind-method.tsd-parent-kind-class.tsd-is-inherited > .tsd-kind-icon:before {
+  background-position: -68px -68px;
+}
+.tsd-kind-method.tsd
