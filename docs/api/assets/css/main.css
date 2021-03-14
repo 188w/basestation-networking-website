@@ -1037,4 +1037,14 @@ ul.tsd-descriptions > li > :last-child > :last-child > :last-child,
 .tsd-kind-method.tsd-parent-kind-class.tsd-is-private > .tsd-kind-icon:before {
   background-position: -119px -68px;
 }
-.tsd-kind-method.tsd-parent-kind-enum > .tsd-kind-
+.tsd-kind-method.tsd-parent-kind-enum > .tsd-kind-icon:before {
+  background-position: -170px -68px;
+}
+.tsd-kind-method.tsd-parent-kind-enum.tsd-is-protected > .tsd-kind-icon:before {
+  background-position: -187px -68px;
+}
+.tsd-kind-method.tsd-parent-kind-enum.tsd-is-private > .tsd-kind-icon:before {
+  background-position: -119px -68px;
+}
+.tsd-kind-method.tsd-parent-kind-interface > .tsd-kind-icon:before {
+  background-po
