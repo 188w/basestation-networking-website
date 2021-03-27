@@ -1157,4 +1157,14 @@ ul.tsd-descriptions > li > :last-child > :last-child > :last-child,
 .tsd-kind-method.tsd-has-type-parameter.tsd-parent-kind-class.tsd-is-private > .tsd-kind-icon:before {
   background-position: -119px -85px;
 }
-.tsd-kind-method.tsd-has-type-parameter.tsd-parent-kind-enum > .tsd-kind-icon:bef
+.tsd-kind-method.tsd-has-type-parameter.tsd-parent-kind-enum > .tsd-kind-icon:before {
+  background-position: -170px -85px;
+}
+.tsd-kind-method.tsd-has-type-parameter.tsd-parent-kind-enum.tsd-is-protected > .tsd-kind-icon:before {
+  background-position: -187px -85px;
+}
+.tsd-kind-method.tsd-has-type-parameter.tsd-parent-kind-enum.tsd-is-private > .tsd-kind-icon:before {
+  background-position: -119px -85px;
+}
+.tsd-kind-method.tsd-has-type-parameter.tsd-parent-kind-interface > .tsd-kind-icon:before {
+  background-position: -204px
