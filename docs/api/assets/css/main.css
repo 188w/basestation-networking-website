@@ -1167,4 +1167,16 @@ ul.tsd-descriptions > li > :last-child > :last-child > :last-child,
   background-position: -119px -85px;
 }
 .tsd-kind-method.tsd-has-type-parameter.tsd-parent-kind-interface > .tsd-kind-icon:before {
-  background-position: -204px
+  background-position: -204px -85px;
+}
+.tsd-kind-method.tsd-has-type-parameter.tsd-parent-kind-interface.tsd-is-inherited > .tsd-kind-icon:before {
+  background-position: -221px -85px;
+}
+
+.tsd-kind-constructor > .tsd-kind-icon:before {
+  background-position: -136px -102px;
+}
+.tsd-kind-constructor.tsd-is-protected > .tsd-kind-icon:before {
+  background-position: -153px -102px;
+}
+.tsd-kind-constructor.tsd-is-private > .tsd-kind-icon:befo
