@@ -1230,3 +1230,14 @@ ul.tsd-descriptions > li > :last-child > :last-child > :last-child,
 }
 .tsd-kind-constructor-signature.tsd-parent-kind-class.tsd-is-protected > .tsd-kind-icon:before {
   background-position: -85px -102px;
+}
+.tsd-kind-constructor-signature.tsd-parent-kind-class.tsd-is-protected.tsd-is-inherited > .tsd-kind-icon:before {
+  background-position: -102px -102px;
+}
+.tsd-kind-constructor-signature.tsd-parent-kind-class.tsd-is-private > .tsd-kind-icon:before {
+  background-position: -119px -102px;
+}
+.tsd-kind-constructor-signature.tsd-parent-kind-enum > .tsd-kind-icon:before {
+  background-position: -170px -102px;
+}
+.tsd-kind-construct
