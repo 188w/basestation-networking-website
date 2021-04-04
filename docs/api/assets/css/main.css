@@ -1249,4 +1249,15 @@ ul.tsd-descriptions > li > :last-child > :last-child > :last-child,
 .tsd-kind-constructor-signature.tsd-parent-kind-interface > .tsd-kind-icon:before {
   background-position: -204px -102px;
 }
-.tsd-kind-constructor-signature.tsd-
+.tsd-kind-constructor-signature.tsd-parent-kind-interface.tsd-is-inherited > .tsd-kind-icon:before {
+  background-position: -221px -102px;
+}
+
+.tsd-kind-index-signature > .tsd-kind-icon:before {
+  background-position: -136px -119px;
+}
+.tsd-kind-index-signature.tsd-is-protected > .tsd-kind-icon:before {
+  background-position: -153px -119px;
+}
+.tsd-kind-index-signature.tsd-is-private > .tsd-kind-icon:before {
+  background-position: -11
