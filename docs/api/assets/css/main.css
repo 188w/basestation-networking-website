@@ -1260,4 +1260,15 @@ ul.tsd-descriptions > li > :last-child > :last-child > :last-child,
   background-position: -153px -119px;
 }
 .tsd-kind-index-signature.tsd-is-private > .tsd-kind-icon:before {
-  background-position: -11
+  background-position: -119px -119px;
+}
+.tsd-kind-index-signature.tsd-parent-kind-class > .tsd-kind-icon:before {
+  background-position: -51px -119px;
+}
+.tsd-kind-index-signature.tsd-parent-kind-class.tsd-is-inherited > .tsd-kind-icon:before {
+  background-position: -68px -119px;
+}
+.tsd-kind-index-signature.tsd-parent-kind-class.tsd-is-protected > .tsd-kind-icon:before {
+  background-position: -85px -119px;
+}
+.
