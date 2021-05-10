@@ -1499,4 +1499,13 @@ ul.tsd-descriptions > li > :last-child > :last-child > :last-child,
 .tsd-is-static.tsd-kind-event.tsd-is-protected > .tsd-kind-icon:before {
   background-position: -153px -187px;
 }
-.tsd-is-static.tsd-k
+.tsd-is-static.tsd-kind-event.tsd-is-private > .tsd-kind-icon:before {
+  background-position: -119px -187px;
+}
+.tsd-is-static.tsd-kind-event.tsd-parent-kind-class > .tsd-kind-icon:before {
+  background-position: -51px -187px;
+}
+.tsd-is-static.tsd-kind-event.tsd-parent-kind-class.tsd-is-inherited > .tsd-kind-icon:before {
+  background-position: -68px -187px;
+}
+.tsd-is-static.tsd-kind-event.tsd-parent-kind-class.tsd-is-protec
