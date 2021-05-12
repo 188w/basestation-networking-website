@@ -1527,4 +1527,32 @@ ul.tsd-descriptions > li > :last-child > :last-child > :last-child,
   background-position: -119px -187px;
 }
 .tsd-is-static.tsd-kind-event.tsd-parent-kind-interface > .tsd-kind-icon:before {
-  background-position
+  background-position: -204px -187px;
+}
+.tsd-is-static.tsd-kind-event.tsd-parent-kind-interface.tsd-is-inherited > .tsd-kind-icon:before {
+  background-position: -221px -187px;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fade-in-delayed {
+  0% {
+    opacity: 0;
+  }
+  33% {
+ 
