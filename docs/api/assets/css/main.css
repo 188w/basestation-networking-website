@@ -1555,4 +1555,32 @@ ul.tsd-descriptions > li > :last-child > :last-child > :last-child,
     opacity: 0;
   }
   33% {
- 
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-out-delayed {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes shift-to-left {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-25%, 0);
+  }
+}
+@keyframes unshift-to-left {
+  from {
+    transform: translate(-25%, 0
