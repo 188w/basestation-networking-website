@@ -1583,4 +1583,30 @@ ul.tsd-descriptions > li > :last-child > :last-child > :last-child,
 }
 @keyframes unshift-to-left {
   from {
-    transform: translate(-25%, 0
+    transform: translate(-25%, 0);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+@keyframes pop-in-from-right {
+  from {
+    transform: translate(100%, 0);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+@keyframes pop-out-to-right {
+  from {
+    transform: translate(0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate(100%, 0);
+  }
+}
+body {
+  background: var(--color-background);
+  font-family: "Segoe UI", sans-serif;
+  font-siz
