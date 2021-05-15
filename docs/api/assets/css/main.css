@@ -1609,4 +1609,34 @@ ul.tsd-descriptions > li > :last-child > :last-child > :last-child,
 body {
   background: var(--color-background);
   font-family: "Segoe UI", sans-serif;
-  font-siz
+  font-size: 16px;
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+code, pre {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  padding: 0.2em;
+  margin: 0;
+  font-size: 14px;
+  background-color: var(--color-code-background);
+}
+
+pre {
+  padding: 10px;
+}
+pre code {
+  padding: 0;
+  font-size: 100%;
+  background-color: transparent;
+}
+
+blockquote {
+  margi
