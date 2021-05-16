@@ -1659,4 +1659,25 @@ blockquote {
 .tsd-typography h5, .tsd-typography h6 {
   font-weight: normal;
 }
-.tsd-typog
+.tsd-typography p, .tsd-typography ul, .tsd-typography ol {
+  margin: 1em 0;
+}
+
+@media (min-width: 901px) and (max-width: 1024px) {
+  html.default .col-content {
+    width: 72%;
+  }
+  html.default .col-menu {
+    width: 28%;
+  }
+  html.default .tsd-navigation {
+    padding-left: 10px;
+  }
+}
+@media (max-width: 900px) {
+  html.default .col-content {
+    float: none;
+    width: 100%;
+  }
+  html.default .col-menu {
+    po
