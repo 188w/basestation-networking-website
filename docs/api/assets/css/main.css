@@ -1695,4 +1695,24 @@ blockquote {
     background-color: var(--color-panel);
     transform: translate(100%, 0);
   }
-  html.default .col-menu > *:la
+  html.default .col-menu > *:last-child {
+    padding-bottom: 20px;
+  }
+  html.default .overlay {
+    content: "";
+    display: block;
+    position: fixed;
+    z-index: 1023;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    visibility: hidden;
+  }
+  html.default.to-has-menu .overlay {
+    animation: fade-in 0.4s;
+  }
+  html.default.to-has-menu header,
+html.default.to-has-menu footer,
+html.def
