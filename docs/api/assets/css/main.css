@@ -1680,4 +1680,19 @@ blockquote {
     width: 100%;
   }
   html.default .col-menu {
-    po
+    position: fixed !important;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 1024;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: auto !important;
+    right: 0 !important;
+    width: 100%;
+    padding: 20px 20px 0 0;
+    max-width: 450px;
+    visibility: hidden;
+    background-color: var(--color-panel);
+    transform: translate(100%, 0);
+  }
+  html.default .col-menu > *:la
