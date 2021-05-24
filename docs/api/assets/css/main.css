@@ -1729,4 +1729,20 @@ html.default.from-has-menu footer,
 html.default.from-has-menu .col-content {
     animation: unshift-to-left 0.4s;
   }
-  html.default.
+  html.default.from-has-menu .col-menu {
+    animation: pop-out-to-right 0.4s;
+  }
+  html.default.has-menu body {
+    overflow: hidden;
+  }
+  html.default.has-menu .overlay {
+    visibility: visible;
+  }
+  html.default.has-menu header,
+html.default.has-menu footer,
+html.default.has-menu .col-content {
+    transform: translate(-25%, 0);
+  }
+  html.default.has-menu .col-menu {
+    visibility: visible;
+    transform
