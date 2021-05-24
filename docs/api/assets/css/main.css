@@ -1715,4 +1715,18 @@ blockquote {
   }
   html.default.to-has-menu header,
 html.default.to-has-menu footer,
-html.def
+html.default.to-has-menu .col-content {
+    animation: shift-to-left 0.4s;
+  }
+  html.default.to-has-menu .col-menu {
+    animation: pop-in-from-right 0.4s;
+  }
+  html.default.from-has-menu .overlay {
+    animation: fade-out 0.4s;
+  }
+  html.default.from-has-menu header,
+html.default.from-has-menu footer,
+html.default.from-has-menu .col-content {
+    animation: unshift-to-left 0.4s;
+  }
+  html.default.
