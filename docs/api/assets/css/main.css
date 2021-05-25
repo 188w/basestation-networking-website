@@ -1745,4 +1745,28 @@ html.default.has-menu .col-content {
   }
   html.default.has-menu .col-menu {
     visibility: visible;
-    transform
+    transform: translate(0, 0);
+  }
+}
+
+.tsd-page-title {
+  padding: 70px 0 20px 0;
+  margin: 0 0 40px 0;
+  background: var(--color-panel);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
+}
+.tsd-page-title h1 {
+  margin: 0;
+}
+
+.tsd-breadcrumb {
+  margin: 0;
+  padding: 0;
+  color: var(--color-text-aside);
+}
+.tsd-breadcrumb a {
+  color: var(--color-text-aside);
+  text-decoration: none;
+}
+.tsd-breadcrumb a:hover {
+  text-decoration: un
