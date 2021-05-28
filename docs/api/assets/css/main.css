@@ -1794,4 +1794,28 @@ html.minimal .tsd-navigation {
   -webkit-overflow-scrolling: touch;
   box-sizing: border-box;
   z-index: 1;
-  left: 
+  left: 0;
+  top: 40px;
+  bottom: 0;
+  width: 300px;
+  padding: 20px;
+  margin: 0;
+}
+html.minimal .tsd-member .tsd-member {
+  margin-left: 0;
+}
+html.minimal .tsd-page-toolbar {
+  position: fixed;
+  z-index: 2;
+}
+html.minimal #tsd-filter .tsd-filter-group {
+  right: 0;
+  transform: none;
+}
+html.minimal footer {
+  background-color: transparent;
+}
+html.minimal footer .container {
+  padding: 0;
+}
+html.minima
