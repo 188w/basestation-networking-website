@@ -1908,4 +1908,19 @@ dl.tsd-comment-tags p {
     position: absolute;
     top: 40px;
     right: 20px;
-   
+    height: auto;
+    background-color: var(--color-panel);
+    visibility: hidden;
+    transform: translate(50%, 0);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  }
+  .has-options #tsd-filter .tsd-filter-group {
+    visibility: visible;
+  }
+  .to-has-options #tsd-filter .tsd-filter-group {
+    animation: fade-in 0.2s;
+  }
+  .from-has-options #tsd-filter .tsd-filter-group {
+    animation: fade-out 0.2s;
+  }
+  #ts
