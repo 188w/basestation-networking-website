@@ -1886,4 +1886,26 @@ dl.tsd-comment-tags p {
 
 #tsd-filter {
   position: relative;
-  display: inline-bloc
+  display: inline-block;
+  height: 40px;
+  vertical-align: bottom;
+}
+.no-filter #tsd-filter {
+  display: none;
+}
+#tsd-filter .tsd-filter-group {
+  display: inline-block;
+  height: 40px;
+  vertical-align: bottom;
+  white-space: nowrap;
+}
+#tsd-filter input {
+  display: none;
+}
+@media (max-width: 900px) {
+  #tsd-filter .tsd-filter-group {
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+   
