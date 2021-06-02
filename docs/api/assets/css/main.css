@@ -1860,4 +1860,30 @@ dl.tsd-comment-tags p {
 .tsd-panel.tsd-comment .lead {
   font-size: 1.1em;
   line-height: 1.333em;
-  margin-bottom: 
+  margin-bottom: 2em;
+}
+.tsd-panel.tsd-comment .lead:last-child {
+  margin-bottom: 0;
+}
+
+.toggle-protected .tsd-is-private {
+  display: none;
+}
+
+.toggle-public .tsd-is-private,
+.toggle-public .tsd-is-protected,
+.toggle-public .tsd-is-private-protected {
+  display: none;
+}
+
+.toggle-inherited .tsd-is-inherited {
+  display: none;
+}
+
+.toggle-externals .tsd-is-external {
+  display: none;
+}
+
+#tsd-filter {
+  position: relative;
+  display: inline-bloc
