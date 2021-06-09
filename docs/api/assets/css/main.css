@@ -1923,4 +1923,25 @@ dl.tsd-comment-tags p {
   .from-has-options #tsd-filter .tsd-filter-group {
     animation: fade-out 0.2s;
   }
-  #ts
+  #tsd-filter label,
+#tsd-filter .tsd-select {
+    display: block;
+    padding-right: 20px;
+  }
+}
+
+footer {
+  border-top: 1px solid var(--color-panel-divider);
+  background-color: var(--color-panel);
+}
+footer.with-border-bottom {
+  border-bottom: 1px solid var(--color-panel-divider);
+}
+footer .tsd-legend-group {
+  font-size: 0;
+}
+footer .tsd-legend {
+  display: inline-block;
+  width: 25%;
+  padding: 0;
+  font-size: 16px
