@@ -1988,4 +1988,21 @@ footer .tsd-legend {
   column-gap: 20px;
   padding: 0;
   list-style: none;
-  line-height: 1.333e
+  line-height: 1.333em;
+}
+@media (max-width: 900px) {
+  .tsd-index-panel ul.tsd-index-list {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    -ms-column-count: 1;
+    -o-column-count: 1;
+    column-count: 1;
+  }
+}
+@media (min-width: 901px) and (max-width: 1024px) {
+  .tsd-index-panel ul.tsd-index-list {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    -ms-column-count: 2;
+    -o-column-count: 2;
+  
