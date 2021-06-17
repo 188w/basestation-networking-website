@@ -2005,4 +2005,21 @@ footer .tsd-legend {
     -moz-column-count: 2;
     -ms-column-count: 2;
     -o-column-count: 2;
-  
+    column-count: 2;
+  }
+}
+.tsd-index-panel ul.tsd-index-list li {
+  -webkit-page-break-inside: avoid;
+  -moz-page-break-inside: avoid;
+  -ms-page-break-inside: avoid;
+  -o-page-break-inside: avoid;
+  page-break-inside: avoid;
+}
+.tsd-index-panel a,
+.tsd-index-panel .tsd-parent-kind-module a {
+  color: var(--color-ts);
+}
+.tsd-index-panel .tsd-parent-kind-interface a {
+  color: var(--color-ts-interface);
+}
+.tsd-index-pa
