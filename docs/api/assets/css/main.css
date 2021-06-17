@@ -2022,4 +2022,20 @@ footer .tsd-legend {
 .tsd-index-panel .tsd-parent-kind-interface a {
   color: var(--color-ts-interface);
 }
-.tsd-index-pa
+.tsd-index-panel .tsd-parent-kind-enum a {
+  color: var(--color-ts-enum);
+}
+.tsd-index-panel .tsd-parent-kind-class a {
+  color: var(--color-ts-class);
+}
+.tsd-index-panel .tsd-kind-module a {
+  color: var(--color-ts);
+}
+.tsd-index-panel .tsd-kind-interface a {
+  color: var(--color-ts-interface);
+}
+.tsd-index-panel .tsd-kind-enum a {
+  color: var(--color-ts-enum);
+}
+.tsd-index-panel .tsd-kind-class a {
+  color: var(--color-ts-clas
