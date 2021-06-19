@@ -2081,4 +2081,28 @@ footer .tsd-legend {
   color: var(--color-ts-class);
 }
 .tsd-member a[data-tsd-kind=Private] {
-  color: var(--c
+  color: var(--color-ts-private);
+}
+
+.tsd-navigation {
+  margin: 0 0 0 40px;
+}
+.tsd-navigation a {
+  display: block;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-left: 2px solid transparent;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: border-left-color 0.1s;
+}
+.tsd-navigation a:hover {
+  text-decoration: underline;
+}
+.tsd-navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tsd-navigation li {
+  padding: 0;
