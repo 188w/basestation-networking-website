@@ -2106,3 +2106,26 @@ footer .tsd-legend {
 }
 .tsd-navigation li {
   padding: 0;
+}
+
+.tsd-navigation.primary {
+  padding-bottom: 40px;
+}
+.tsd-navigation.primary a {
+  display: block;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.tsd-navigation.primary ul li a {
+  padding-left: 5px;
+}
+.tsd-navigation.primary ul li li a {
+  padding-left: 25px;
+}
+.tsd-navigation.primary ul li li li a {
+  padding-left: 45px;
+}
+.tsd-navigation.primary ul li li li li a {
+  padding-left: 65px;
+}
+.tsd-navigation.primar
