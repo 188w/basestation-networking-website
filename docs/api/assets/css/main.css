@@ -2064,4 +2064,21 @@ footer .tsd-legend {
   position: relative;
 }
 .tsd-member .tsd-anchor + h3 {
-  
+  margin-top: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+.tsd-member a[data-tsd-kind] {
+  color: var(--color-ts);
+}
+.tsd-member a[data-tsd-kind=Interface] {
+  color: var(--color-ts-interface);
+}
+.tsd-member a[data-tsd-kind=Enum] {
+  color: var(--color-ts-enum);
+}
+.tsd-member a[data-tsd-kind=Class] {
+  color: var(--color-ts-class);
+}
+.tsd-member a[data-tsd-kind=Private] {
+  color: var(--c
