@@ -2145,4 +2145,21 @@ footer .tsd-legend {
 }
 .tsd-navigation.primary li.label span {
   display: block;
-  padding
+  padding: 20px 0 6px 5px;
+  color: var(--color-menu-label);
+}
+.tsd-navigation.primary li.globals + li > span, .tsd-navigation.primary li.globals + li > a {
+  padding-top: 20px;
+}
+
+.tsd-navigation.secondary {
+  max-height: calc(100vh - 1rem - 40px);
+  overflow: auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: calc(.5rem + 40px);
+  transition: 0.3s;
+}
+.tsd-navigation.secondary.tsd-navigation--toolbar-hide {
+  max-height: calc(100vh - 1rem);
+ 
