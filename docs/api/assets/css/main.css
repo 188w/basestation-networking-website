@@ -2162,4 +2162,21 @@ footer .tsd-legend {
 }
 .tsd-navigation.secondary.tsd-navigation--toolbar-hide {
   max-height: calc(100vh - 1rem);
- 
+  top: 0.5rem;
+}
+.tsd-navigation.secondary ul {
+  transition: opacity 0.2s;
+}
+.tsd-navigation.secondary ul li a {
+  padding-left: 25px;
+}
+.tsd-navigation.secondary ul li li a {
+  padding-left: 45px;
+}
+.tsd-navigation.secondary ul li li li a {
+  padding-left: 65px;
+}
+.tsd-navigation.secondary ul li li li li a {
+  padding-left: 85px;
+}
+.tsd-navigation.secondary ul li li li li li
