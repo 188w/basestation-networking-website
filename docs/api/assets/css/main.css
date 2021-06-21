@@ -2128,4 +2128,21 @@ footer .tsd-legend {
 .tsd-navigation.primary ul li li li li a {
   padding-left: 65px;
 }
-.tsd-navigation.primar
+.tsd-navigation.primary ul li li li li li a {
+  padding-left: 85px;
+}
+.tsd-navigation.primary ul li li li li li li a {
+  padding-left: 105px;
+}
+.tsd-navigation.primary > ul {
+  border-bottom: 1px solid var(--color-panel-divider);
+}
+.tsd-navigation.primary li {
+  border-top: 1px solid var(--color-panel-divider);
+}
+.tsd-navigation.primary li.current > a {
+  font-weight: bold;
+}
+.tsd-navigation.primary li.label span {
+  display: block;
+  padding
