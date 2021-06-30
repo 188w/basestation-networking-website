@@ -2229,4 +2229,26 @@ footer .tsd-legend {
   display: block;
   width: 100%;
   overflow: auto;
-  margin-top:
+  margin-top: 10px;
+  word-break: normal;
+  word-break: keep-all;
+}
+.tsd-panel table th {
+  font-weight: bold;
+}
+.tsd-panel table th, .tsd-panel table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+.tsd-panel table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+.tsd-panel table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.tsd-panel-group {
+  margin: 60px 0;
+}
+.tsd-panel-group > h1
