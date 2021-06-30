@@ -2216,4 +2216,17 @@ footer .tsd-legend {
 .tsd-panel:empty {
   display: none;
 }
-.tsd
+.tsd-panel > h1, .tsd-panel > h2, .tsd-panel > h3 {
+  margin: 1.5em -20px 10px -20px;
+  padding: 0 20px 10px 20px;
+  border-bottom: 1px solid var(--color-panel-divider);
+}
+.tsd-panel > h1.tsd-before-signature, .tsd-panel > h2.tsd-before-signature, .tsd-panel > h3.tsd-before-signature {
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+.tsd-panel table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  margin-top:
