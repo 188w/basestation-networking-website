@@ -2194,4 +2194,26 @@ footer .tsd-legend {
 }
 .tsd-navigation.secondary li.current {
   margin-top: 20px;
-  margin-bo
+  margin-bottom: 20px;
+  border-left-color: var(--color-panel-divider);
+}
+.tsd-navigation.secondary li.current > a {
+  font-weight: bold;
+}
+
+@media (min-width: 901px) {
+  .menu-sticky-wrap {
+    position: static;
+  }
+}
+
+.tsd-panel {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: var(--color-panel);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+.tsd-panel:empty {
+  display: none;
+}
+.tsd
