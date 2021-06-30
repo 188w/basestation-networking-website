@@ -2179,4 +2179,19 @@ footer .tsd-legend {
 .tsd-navigation.secondary ul li li li li a {
   padding-left: 85px;
 }
-.tsd-navigation.secondary ul li li li li li
+.tsd-navigation.secondary ul li li li li li a {
+  padding-left: 105px;
+}
+.tsd-navigation.secondary ul li li li li li li a {
+  padding-left: 125px;
+}
+.tsd-navigation.secondary ul.current a {
+  border-left-color: var(--color-panel-divider);
+}
+.tsd-navigation.secondary li.focus > a,
+.tsd-navigation.secondary ul.current li.focus > a {
+  border-left-color: var(--color-menu-divider-focus);
+}
+.tsd-navigation.secondary li.current {
+  margin-top: 20px;
+  margin-bo
