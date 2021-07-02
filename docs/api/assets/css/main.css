@@ -2279,4 +2279,25 @@ footer .tsd-legend {
   padding: 0 10px;
   opacity: 0;
   outline: 0;
-  
+  border: 0;
+  background: transparent;
+  color: var(--color-text);
+}
+#tsd-search .field label {
+  position: absolute;
+  overflow: hidden;
+  right: -40px;
+}
+#tsd-search .field input,
+#tsd-search .title {
+  transition: opacity 0.2s;
+}
+#tsd-search .results {
+  position: absolute;
+  visibility: hidden;
+  top: 40px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-shadow: 0 0 4px rgba(0, 
