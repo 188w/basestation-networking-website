@@ -2341,4 +2341,25 @@ footer .tsd-legend {
   visibility: visible;
 }
 #tsd-search.loading .results li.state.loading {
-  displ
+  display: block;
+}
+#tsd-search.failure .results li.state.failure {
+  display: block;
+}
+
+.tsd-signature {
+  margin: 0 0 1em 0;
+  padding: 10px;
+  border: 1px solid var(--color-panel-divider);
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 14px;
+  overflow-x: auto;
+}
+.tsd-signature.tsd-kind-icon {
+  padding-left: 30px;
+}
+.tsd-signature.tsd-kind-icon:before {
+  top: 10px;
+  left: 10px;
+}
+.tsd-panel > .tsd-
