@@ -2381,4 +2381,23 @@ footer .tsd-legend {
 
 .tsd-signature-type {
   font-style: italic;
-  font-weight: norma
+  font-weight: normal;
+}
+
+.tsd-signatures {
+  padding: 0;
+  margin: 0 0 1em 0;
+  border: 1px solid var(--color-panel-divider);
+}
+.tsd-signatures .tsd-signature {
+  margin: 0;
+  border-width: 1px 0 0 0;
+  transition: background-color 0.1s;
+}
+.tsd-signatures .tsd-signature:first-child {
+  border-top-width: 0;
+}
+.tsd-signatures .tsd-signature.current {
+  background-color: var(--color-panel-divider);
+}
+.tsd-signatures.active > .tsd-sign
