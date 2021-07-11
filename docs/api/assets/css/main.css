@@ -2400,4 +2400,24 @@ footer .tsd-legend {
 .tsd-signatures .tsd-signature.current {
   background-color: var(--color-panel-divider);
 }
-.tsd-signatures.active > .tsd-sign
+.tsd-signatures.active > .tsd-signature {
+  cursor: pointer;
+}
+.tsd-panel > .tsd-signatures {
+  margin-left: -20px;
+  margin-right: -20px;
+  border-width: 1px 0;
+}
+.tsd-panel > .tsd-signatures .tsd-signature.tsd-kind-icon {
+  padding-left: 40px;
+}
+.tsd-panel > .tsd-signatures .tsd-signature.tsd-kind-icon:before {
+  left: 20px;
+}
+.tsd-panel > a.anchor + .tsd-signatures {
+  border-top-width: 0;
+  margin-top: -20px;
+}
+
+ul.tsd-descriptions {
+  position: r
