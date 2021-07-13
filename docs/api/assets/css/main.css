@@ -2420,4 +2420,21 @@ footer .tsd-legend {
 }
 
 ul.tsd-descriptions {
-  position: r
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  list-style: none;
+}
+ul.tsd-descriptions.active > .tsd-description {
+  display: none;
+}
+ul.tsd-descriptions.active > .tsd-description.current {
+  display: block;
+}
+ul.tsd-descriptions.active > .tsd-description.fade-in {
+  animation: fade-in-delayed 0.3s;
+}
+ul.tsd-descriptions.active > .tsd-description.fade-out {
+  animation: fade-out-delayed 0.3s;
+  position: absolute;
+  
