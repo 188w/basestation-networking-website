@@ -2456,4 +2456,24 @@ ul.tsd-type-parameters {
   padding-left: 20px;
 }
 ul.tsd-parameters > li.tsd-parameter-signature,
-ul.tsd-type-pa
+ul.tsd-type-parameters > li.tsd-parameter-signature {
+  list-style: none;
+  margin-left: -20px;
+}
+ul.tsd-parameters h5,
+ul.tsd-type-parameters h5 {
+  font-size: 16px;
+  margin: 1em 0 0.5em 0;
+}
+ul.tsd-parameters .tsd-comment,
+ul.tsd-type-parameters .tsd-comment {
+  margin-top: -0.5em;
+}
+
+.tsd-sources {
+  font-size: 14px;
+  color: var(--color-text-aside);
+  margin: 0 0 1em 0;
+}
+.tsd-sources a {
+  color: var(--color-text-aside);
