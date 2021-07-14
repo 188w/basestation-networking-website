@@ -2520,4 +2520,19 @@ ul.tsd-type-parameters .tsd-comment {
   white-space: nowrap;
   line-height: 40px;
 }
-.tsd-page-toolbar .t
+.tsd-page-toolbar .table-cell:first-child {
+  width: 100%;
+}
+
+.tsd-page-toolbar--hide {
+  transform: translateY(-100%);
+}
+
+.tsd-select .tsd-select-list li:before, .tsd-select .tsd-select-label:before, .tsd-widget:before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0 -8px 0 0;
+  background-image: url(../images/widgets.png);
+  background-repeat: no
