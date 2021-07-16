@@ -2551,4 +2551,27 @@ ul.tsd-type-parameters .tsd-comment {
   overflow: hidden;
   opacity: 0.6;
   height: 40px;
-  transition: opacity 0.
+  transition: opacity 0.1s, background-color 0.2s;
+  vertical-align: bottom;
+  cursor: pointer;
+}
+.tsd-widget:hover {
+  opacity: 0.8;
+}
+.tsd-widget.active {
+  opacity: 1;
+  background-color: var(--color-panel-divider);
+}
+.tsd-widget.no-caption {
+  width: 40px;
+}
+.tsd-widget.no-caption:before {
+  margin: 0;
+}
+.tsd-widget.search:before {
+  background-position: 0 0;
+}
+.tsd-widget.menu:before {
+  background-position: -40px 0;
+}
+.tsd-widget.optio
