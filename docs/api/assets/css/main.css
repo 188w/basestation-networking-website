@@ -2535,4 +2535,20 @@ ul.tsd-type-parameters .tsd-comment {
   height: 40px;
   margin: 0 -8px 0 0;
   background-image: url(../images/widgets.png);
-  background-repeat: no
+  background-repeat: no-repeat;
+  text-indent: -1024px;
+  vertical-align: bottom;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .tsd-select .tsd-select-list li:before, .tsd-select .tsd-select-label:before, .tsd-widget:before {
+    background-image: url(../images/widgets@2x.png);
+    background-size: 320px 40px;
+  }
+}
+
+.tsd-widget {
+  display: inline-block;
+  overflow: hidden;
+  opacity: 0.6;
+  height: 40px;
+  transition: opacity 0.
