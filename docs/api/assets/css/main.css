@@ -2574,4 +2574,23 @@ ul.tsd-type-parameters .tsd-comment {
 .tsd-widget.menu:before {
   background-position: -40px 0;
 }
-.tsd-widget.optio
+.tsd-widget.options:before {
+  background-position: -80px 0;
+}
+.tsd-widget.options, .tsd-widget.menu {
+  display: none;
+}
+@media (max-width: 900px) {
+  .tsd-widget.options, .tsd-widget.menu {
+    display: inline-block;
+  }
+}
+input[type=checkbox] + .tsd-widget:before {
+  background-position: -120px 0;
+}
+input[type=checkbox]:checked + .tsd-widget:before {
+  background-position: -160px 0;
+}
+
+.tsd-select {
+  pos
