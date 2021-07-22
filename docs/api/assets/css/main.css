@@ -2593,4 +2593,22 @@ input[type=checkbox]:checked + .tsd-widget:before {
 }
 
 .tsd-select {
-  pos
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  transition: opacity 0.1s, background-color 0.2s;
+  vertical-align: bottom;
+  cursor: pointer;
+}
+.tsd-select .tsd-select-label {
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+.tsd-select .tsd-select-label:before {
+  background-position: -240px 0;
+}
+.tsd-select.active .tsd-select-label {
+  opacity: 0.8;
+}
+.tsd-select.active .tsd-select-list {
+  visibility: vi
