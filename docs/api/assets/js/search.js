@@ -1,1 +1,1 @@
-window.searchData = 
+window.searchData = {"kinds":{"4":"Enumeration","16":"Enumeration member","64":"Function","128":"Class","256":"Interface","512":"Constructor","1024":"Property","2048":"Method","65536":"Type literal","262144":"Accessor","4194304":"Type alias"},"rows":[{"id":0,"kind":256,"name":"GenerateMatrixOptions","url":"interfaces/generatematrixoptions.html","classes":"tsd-kind-interface"},{"id":1,"kind":1024,"name":"range","url":"interface
