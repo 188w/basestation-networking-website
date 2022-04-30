@@ -149,4 +149,7 @@
 				</a>
 				<ul>
 					<li><strong>NetShape</strong>: <code>[number, (number | [number, ActivationFunction]), ...(number | [number, ActivationFunction])[]]</code><br>The hierarchical structure of the network model, It includes the number of neurons in each layer, the type of activation function and the total number of layers.</li>
-			
+					<li><strong>rate</strong>: <code>number</code><br>The learning rate is the update step of every gradient descent, generally between 0 and 1.</li>
+					<li><strong>epochs</strong>: <code>number</code><br>All the data of the whole training set are iterated once.</li>
+					<li><strong>ActivationFunction</strong>: <code>&#39;Sigmoid&#39; | &#39;Relu&#39; | &#39;Tanh&#39; | &#39;Softmax&#39;</code></li>
+					<li><strong>Mode</strong>: <code>&#39;sgd&#39; | &#39;b
