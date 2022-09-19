@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>xor example</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #f1f1f1;
+      color: #3d3537;
+      font-size: 25px;
+    }
+
+    h2 {
+      font-size: 70px;
+      padding-left: 20px;
+      transform: scaleY(.5);
+      margin: 0;
+      letter-spacing: 10px;
+    }
+
+    h4 {
+      padding-left: 20px;
+      margin: 5px 0;
+      line-height: 36px;
+      letter-spacing: 4px;
+    }
+
+    h4 input,
+    h4 select {
+      width: 100px;
+      height: 32px;
+      padding: 3px;
+      line-height: 32px;
+      vertical-align: baseline;
+      font-size: 20px;
+    }
+
+    #container {
+      background: #f6f6f6;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    #canvas,
+    #buts {
+      margin-top: 15px;
+    }
+
+    #buts {
+      padding-left: 20px;
+    }
+
+    #buts button {
+      margin-right: 10px;
+      color: #3d3537;
+      font-size: 30px;
+    }
+
+    pre {
+      font-size: 20px;
+      color: #5c5c5d;
+      padding: 40px 20px;
+      overflow-x: auto;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <h2>XOR EXAMPLE</h2>
+    <h4>SHAPE: [2, [6, 'Tanh'], [6, 'Tanh'], [2, 'Softmax']]</h4>
+    <h4>mode: <select id="mode">
+        <option>sgd</option>
+        <option>bgd</option>
+        <option>mbgd</option>
+      </select> rate: <input id="rate" type="number" value="0.1" /> epochs: <input id="epochs" type="number"
+        value="1000" /></h4>
+    <canvas id="canvas"></canvas>
+    <div id="buts">
+      <button>TRAIN</button>
+      <button>1, 0</button>
+      <button>0, 1</button>
+      <button>0, 0</button>
+      <button>1, 1</button>
+    </div>
+    <pre id="code"></pre>
+  </div>
+  <script type="module" src="./xor.js"></script>
+  <script>
+    let code = document.getElementById('code')
+    fetch('./xor.js').then(t => t.text()).then(res => {
+      code.innerHTML = res
+    })
+  </script>
+</body>
+
+</html>
