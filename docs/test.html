@@ -1,0 +1,50 @@
+
+<body>
+  <video id="video" width="200" height="200"></video>
+  <button id="btn">拍照</button>
+  <canvas alt="" id="canvas"></canvas>
+  <script type="module">
+    import { BPNet, Matrix, toFixed, imageDataToMatrix } from './infers.esm.js'
+
+    let video = document.getElementById('video')
+    let btn = document.getElementById('btn')
+    /** @type HTMLCanvasElement*/
+    let canvas = document.getElementById('canvas')
+
+    navigator.mediaDevices.getUserMedia({
+      video: { width: 200, height: 200 }
+    }).then(mediaStream => {
+      video.srcObject = mediaStream
+      video.play()
+    }).catch(err => {
+      console.log(err)
+    })
+
+    btn.addEventListener('click', () => {
+      let [width, height] = [200, 200]
+      canvas.width = width
+      canvas.height = height
+      let ctx = canvas.getContext('2d')
+      ctx.drawImage(video, 0, 0, canvas.width, canvas.height)
+
+      let tmp = ctx.getImageData(0, 0, canvas.width, canvas.height)
+      console.log(tmp)
+      let matr = imageDataToMatrix(tmp, 'r')
+      console.log(matr)
+      let d = ctx.createImageData(width, height)
+
+      for (let i = 0; i < matr.shape[0]; i++) {
+        for (let j = 0; j < matr.shape[1]; j++) {
+          let k = (i * matr.shape[1] + j) * 4
+          let red = matr.get(i, j)
+          d.data[k] = red
+          // d.data[k + 1] = green
+          // d.data[k + 2] = blue
+          d.data[k + 3] = 255
+        }
+      }
+      ctx.putImageData(d, 0, 0)
+    })
+
+  </script>
+</body>
