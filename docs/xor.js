@@ -24,4 +24,19 @@ modeNode.onchange = v => {
 function init() {
   W = container.getBoundingClientRect().width
   canvas.width = W
-  can
+  canvas.height = H
+  let hy = model.predictNet(xs)
+  let loss = model.calcLoss(xs, ys)
+  drawNet(ctx, model, hy, loss)
+}
+
+window.onresize = init
+init()
+
+buts.forEach(but => {
+  but.addEventListener('click', () => {
+    if (but.innerHTML === 'TRAIN') {
+      but.disabled = true
+      let epochs = Number(document.getElementById('epochs').value)
+      model.fit(xs, ys, {
+        epochs, async: true, onEpoch: (epoch, l
