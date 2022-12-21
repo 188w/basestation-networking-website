@@ -111,4 +111,16 @@ function drawNet(ctx, model, hy, loss, epoch = 0) {
 
   let nlayer = model.hlayer + 1
   for (let l = 0; l < nlayer; l++) {
-    let unit = model.unit(l 
+    let unit = model.unit(l - 1)
+    let nextUnit = model.unit(l)
+    let startY = ((maxUnit - unit) / 2) * spaceY
+    let nextStartY = ((maxUnit - nextUnit) / 2) * spaceY
+    for (let j = 0; j < unit; j++) {
+      let x = left + spaceX * l
+      let y = top + spaceY * j + startY
+      for (let k = 0; k < nextUnit; k++) {
+        let nextX = x + spaceX
+        let nextY = top + spaceY * k + nextStartY
+        drawLine(ctx, { x, y }, { x: nextX, y: nextY })
+      }
+      drawCircle(
