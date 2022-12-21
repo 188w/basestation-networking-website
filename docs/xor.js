@@ -98,4 +98,17 @@ function clearCtx(ctx) {
 
 /**
  * @param {CanvasRenderingContext2D} ctx 
- * @param 
+ * @param {BPNet} model 
+ * @param {Matrix[]} hy 
+ * @param {number} loss
+ * @param {number} epoch
+ */
+function drawNet(ctx, model, hy, loss, epoch = 0) {
+  clearCtx(ctx)
+  let maxUnit = Math.max(...model.shape.map(v => Array.isArray(v) ? v[0] : v))
+  let unitw = W / 24
+  let [top, left, spaceX, spaceY] = [50, 1 * unitw, 6.5 * unitw, 70]
+
+  let nlayer = model.hlayer + 1
+  for (let l = 0; l < nlayer; l++) {
+    let unit = model.unit(l 
