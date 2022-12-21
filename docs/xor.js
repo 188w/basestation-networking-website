@@ -54,4 +54,27 @@ buts.forEach(but => {
     let loss = model.calcLoss(xs, ys)
     let hy = model.predictNet(nxs)
     hy[0] = nxs
-    drawNet(ctx
+    drawNet(ctx, model, hy, loss)
+  })
+})
+
+/**
+ * @param {CanvasRenderingContext2D} ctx 
+ * @param {number} x 
+ * @param {number} y 
+ * @param {number} r 
+ * @param {string | number} n 
+ */
+function drawCircle(ctx, x, y, r, n) {
+  ctx.beginPath()
+  ctx.arc(x, y, r, 0, 2 * Math.PI)
+  ctx.fillStyle = 'white'
+  ctx.fill()
+  ctx.stroke()
+  ctx.fillStyle = '#222'
+  ctx.font = "28px sans-serif";
+  ctx.fillText(n, x - 8, y + 11)
+}
+
+/**
+ * @
