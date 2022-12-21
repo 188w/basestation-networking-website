@@ -77,4 +77,25 @@ function drawCircle(ctx, x, y, r, n) {
 }
 
 /**
- * @
+ * @param {CanvasRenderingContext2D} ctx 
+ * @param {{x: number, y: number}} p1 
+ * @param {{x: number, y: number}} p2 
+ */
+function drawLine(ctx, p1, p2) {
+  ctx.beginPath()
+  ctx.moveTo(p1.x, p1.y)
+  ctx.lineTo(p2.x, p2.y)
+  ctx.stroke()
+}
+
+/**
+ * @param {CanvasRenderingContext2D} ctx 
+ */
+function clearCtx(ctx) {
+  ctx.fillStyle = "#f6f6f6"
+  ctx.fillRect(0, 0, W, H)
+}
+
+/**
+ * @param {CanvasRenderingContext2D} ctx 
+ * @param 
