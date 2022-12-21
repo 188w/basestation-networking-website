@@ -123,4 +123,12 @@ function drawNet(ctx, model, hy, loss, epoch = 0) {
         let nextY = top + spaceY * k + nextStartY
         drawLine(ctx, { x, y }, { x: nextX, y: nextY })
       }
-      drawCircle(
+      drawCircle(ctx, x, y, 20, toFixed(hy[l].get(0, j), 5))
+    }
+  }
+  ctx.beginPath()
+  ctx.fillStyle = '#222'
+  ctx.font = "30px sans-serif";
+  let n = 'epoch: ' + epoch + ', loss: ' + loss
+  ctx.fillText(n, 100, 480)
+}
