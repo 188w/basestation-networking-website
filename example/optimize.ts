@@ -15,4 +15,24 @@ export class Optimize {
       let y = ys.get(i, j)
       return y === 1 ? -Math.log(h) : -Math.log(1 - h)
     }).columnSum()
-    let tmp = t.getRow(0).m
+    let tmp = t.getRow(0).map(v => v / m)
+    return tmp.reduce((p, c) => p + c) / tmp.length
+  }
+
+  /**
+   * Momentum
+   * 动量的梯度下降法
+   * - z = 0.9
+   * - v[t] = z * v[t-1] + α * (∂J / ∂w)
+   * - w = w - v[t]
+   */
+  momentum(xs: Matrix[], ys: Matrix) { }
+  /**
+   * AdaGrad
+   * 学习衰减率法，训练初期波动较大，
+   * 后期学习率可能趋近于0，导致不更新梯度
+   * 将以前的梯度求平方和存储起来
+   * - h[t] = h[t-1] + (∂J / ∂w) ** 2
+   * - w = w - (α / (Math.sqrt(h[t]) + 1e-07)) * (∂J / ∂w)
+   */
+  adaGra
