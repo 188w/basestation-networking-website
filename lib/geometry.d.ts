@@ -10,4 +10,11 @@ export declare class Edge {
     constructor(cond1: [number, number], cond2: [number, number]);
     minXY(): Point;
     maxXY(): Point;
-    testPointIn(pt: Point): 
+    testPointIn(pt: Point): boolean;
+    testPointInside(pt: Point): boolean;
+}
+export declare class Polygon {
+    points: Point[];
+    constructor(pts: [number, number][]);
+    testPointInsidePolygon(pt: Point): number;
+}
