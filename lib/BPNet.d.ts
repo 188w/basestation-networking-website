@@ -35,4 +35,5 @@ export declare class BPNet {
     checkInput(xs: Matrix): void;
     checkOutput(ys: Matrix): void;
     checkSample(xs: Matrix, ys: Matrix): void;
-    fit(xs: Matrix, ys: Matrix
+    fit(xs: Matrix, ys: Matrix, opt?: Partial<TrainingOptions>): Promise<void>;
+}
