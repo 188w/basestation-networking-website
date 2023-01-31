@@ -27,4 +27,12 @@ export declare class BPNet {
         dw: Matrix[];
     };
     adjust(dy: Matrix[], dw: Matrix[]): void;
-    cost(hy: M
+    cost(hy: Matrix, ys: Matrix): number;
+    calcLoss(xs: Matrix, ys: Matrix): number;
+    bgd(xs: Matrix, ys: Matrix, opt: TrainingOptions): Promise<void>;
+    sgd(xs: Matrix, ys: Matrix, opt: TrainingOptions): Promise<void>;
+    mbgd(xs: Matrix, ys: Matrix, opt: TrainingOptions): Promise<void>;
+    checkInput(xs: Matrix): void;
+    checkOutput(ys: Matrix): void;
+    checkSample(xs: Matrix, ys: Matrix): void;
+    fit(xs: Matrix, ys: Matrix
