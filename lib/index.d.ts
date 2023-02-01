@@ -1,4 +1,6 @@
 export * from './matrix';
 export * from './geometry';
 export * from './common';
-e
+export * from './bpnet';
+export * from './types';
+export * from './rnn';
