@@ -12,4 +12,16 @@ export declare class RNN {
     };
     trainData: string[];
     inputSize: number;
-    output
+    outputSize: number;
+    hidenSize: number;
+    firstSt: Matrix;
+    finis: string;
+    rate: number;
+    constructor(opt: RNNOptions);
+    oneHotXs(inputIndex: number): Matrix;
+    oneHotYs(outputIndex: number): Matrix;
+    generateXs(input: string): Matrix[];
+    generateYs(input: string): Matrix[];
+    forwardPropagation(xs: Matrix[]): RNNForwardResult[];
+    calcForward(xs: Matrix, lastSt: Matrix): {
+ 
