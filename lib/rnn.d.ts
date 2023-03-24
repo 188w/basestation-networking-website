@@ -24,4 +24,11 @@ export declare class RNN {
     generateYs(input: string): Matrix[];
     forwardPropagation(xs: Matrix[]): RNNForwardResult[];
     calcForward(xs: Matrix, lastSt: Matrix): {
- 
+        st: Matrix;
+        yt: Matrix;
+    };
+    backPropagation(hy: RNNForwardResult[], xs: Matrix[], ys: Matrix[]): void;
+    predict(input: string, length?: number): string;
+    cost(hy: RNNForwardResult[], ys: Matrix[]): number;
+    fit(opt?: RNNTrainingOptions): void;
+}
