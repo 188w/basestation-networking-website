@@ -57,3 +57,22 @@ export function afd(x: number, af?: ActivationFunction) {
       return x * (1 - x)
     case 'Relu':
       return x >= 0 ? 1 : 0
+    case 'Tanh':
+      return 1 - Math.tanh(x) ** 2
+    case 'Softmax':
+    // only last-layer, y must is 0/1
+    // d = (y=1) ? hy - 1; (y=0) ? hy - y; d = hy - y
+    default:
+      return 1
+  }
+}
+
+export enum Channel { r, g, b, a }
+
+/**
+ * ImageData转Matrix
+ */
+export function imageDataToMatrix(d: ImageData, ch: keyof typeof Channel) {
+  let channel = Channel[ch]
+  let n: number[][] = []
+  for (let i = 0; 
