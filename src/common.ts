@@ -19,4 +19,22 @@ export function upset(xs: Matrix, ys: Matrix) {
   let xss = xs.dataSync()
   let yss = ys.dataSync()
   for (let i = 1; i < ys.shape[0]; i++) {
-    let random = Math.floor(Math.random() * (i + 1))
+    let random = Math.floor(Math.random() * (i + 1));
+    [xss[i], xss[random]] = [xss[random], xss[i]];
+    [yss[i], yss[random]] = [yss[random], yss[i]];
+  }
+  return { xs: new Matrix(xss), ys: new Matrix(yss) }
+}
+
+/**
+ * 激活函数求值
+ * @param x 目标
+ * @param rows 该层的多个输出值
+ * @param af 激活函数类型
+ */
+export function afn(x: number, rows: number[], af?: ActivationFunction) {
+  switch (af) {
+    case 'Sigmoid':
+      return 1 / (1 + Math.exp(-x))
+    case 'Relu':
+      return x >= 0 
