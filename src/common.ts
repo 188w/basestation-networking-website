@@ -37,4 +37,23 @@ export function afn(x: number, rows: number[], af?: ActivationFunction) {
     case 'Sigmoid':
       return 1 / (1 + Math.exp(-x))
     case 'Relu':
-      return x >= 0 
+      return x >= 0 ? x : 0
+    case 'Tanh':
+      return Math.tanh(x)
+    case 'Softmax':
+      let d = Math.max(...rows) //防止指数过大
+      return Math.exp(x - d) / rows.reduce((p, c) => p + Math.exp(c - d), 0)
+    default:
+      return x
+  }
+}
+
+/**
+ * 激活函数求导
+ */
+export function afd(x: number, af?: ActivationFunction) {
+  switch (af) {
+    case 'Sigmoid':
+      return x * (1 - x)
+    case 'Relu':
+      return x >= 0 ? 1 : 0
