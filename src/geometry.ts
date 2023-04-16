@@ -21,4 +21,18 @@ export class Edge {
     return new Point(X, Y)
   }
   maxXY() {
-    let X = Math.max(this.start.X, this.en
+    let X = Math.max(this.start.X, this.end.X)
+    let Y = Math.max(this.start.Y, this.end.Y)
+    return new Point(X, Y)
+  }
+  /**
+   * 点是否在边的斜率上
+   * @param pt 
+   * @returns 
+   */
+  testPointIn(pt: Point): boolean {
+    if (pt.contrast(this.start) || pt.contrast(this.end)) {
+      return true
+    }
+    let slope1 = pt.X - this.start.X === 0 ? Infinity : (pt.Y - this.start.Y) / (pt.X - this.start.X)
+    let slope2 = pt.X - this.end.X === 0 ? Infi
