@@ -75,4 +75,13 @@ export enum Channel { r, g, b, a }
 export function imageDataToMatrix(d: ImageData, ch: keyof typeof Channel) {
   let channel = Channel[ch]
   let n: number[][] = []
-  for (let i = 0; 
+  for (let i = 0; i < d.height; i++) {
+    let m: number[] = []
+    for (let j = 0; j < d.width; j++) {
+      let k = (i * d.width + j) * 4
+      m.push(d.data[k] + channel)
+    }
+    n.push(m)
+  }
+  return new Matrix(n)
+}
