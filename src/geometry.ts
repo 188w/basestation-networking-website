@@ -67,4 +67,20 @@ export class Polygon {
     const r0 = this.points.map(p => p.X.toString() + p.Y.toString()).sort()
     const r1 = r0.find((x, i) => x === r0[i + 1])
     if (r1) {
-      throw new Error('不能有相同
+      throw new Error('不能有相同的点')
+    }
+    const first = this.points[0]
+    const r3 = this.points.slice(1)
+    let m = r3.map(p =>
+      p.X === first.X ? Infinity //正无穷
+        : (p.Y - first.Y) / (p.X - first.X)
+    )
+    if (new Set(m).size === 1) {
+      throw new Error('所有点不能在一条线上')
+    }
+  }
+
+  testPointInsidePolygon(pt: Point): number {
+    let polygon = this.points
+    var result = 0,
+      cnt = poly
