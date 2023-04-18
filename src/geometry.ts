@@ -53,4 +53,18 @@ export class Edge {
   }
 }
 
-export class Polygon
+export class Polygon {
+  points: Point[]
+  constructor(pts: [number, number][]) {
+    this.points = []
+    for (let i = 0; i < pts.length; i++) {
+      this.points.push(new Point(pts[i][0], pts[i][1]))
+    }
+
+    if (this.points.length < 3) {
+      throw new Error('至少三个点')
+    }
+    const r0 = this.points.map(p => p.X.toString() + p.Y.toString()).sort()
+    const r1 = r0.find((x, i) => x === r0[i + 1])
+    if (r1) {
+      throw new Error('不能有相同
