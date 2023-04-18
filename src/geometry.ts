@@ -35,4 +35,22 @@ export class Edge {
       return true
     }
     let slope1 = pt.X - this.start.X === 0 ? Infinity : (pt.Y - this.start.Y) / (pt.X - this.start.X)
-    let slope2 = pt.X - this.end.X === 0 ? Infi
+    let slope2 = pt.X - this.end.X === 0 ? Infinity : (pt.Y - this.end.Y) / (pt.X - this.end.X)
+    return slope1 === slope2
+  }
+  /**
+   * 点内边内
+   * @param pt 
+   * @returns 
+   */
+  testPointInside(pt: Point): boolean {
+    if (this.testPointIn(pt)) {
+      let min = this.minXY()
+      let max = this.maxXY()
+      return (pt.X >= min.X && pt.X <= max.X) && (pt.Y >= min.Y && pt.Y <= max.Y)
+    }
+    return false
+  }
+}
+
+export class Polygon
