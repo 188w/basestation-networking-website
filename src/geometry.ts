@@ -83,4 +83,17 @@ export class Polygon {
   testPointInsidePolygon(pt: Point): number {
     let polygon = this.points
     var result = 0,
-      cnt = poly
+      cnt = polygon.length;
+    if (cnt < 3)
+      return 0;
+    var ip = polygon[0];
+    for (var i = 1; i <= cnt; ++i) {
+      var ipNext = i === cnt ? polygon[0] : polygon[i]
+      if (ipNext.Y === pt.Y) {
+        if ((ipNext.X === pt.X) || (ip.Y === pt.Y && ((ipNext.X > pt.X) === (ip.X < pt.X))))
+          return -1;
+      }
+      if ((ip.Y < pt.Y) !== (ipNext.Y < pt.Y)) {
+        if (ip.X >= pt.X) {
+          if (ipNext.X > pt.X)
+      
