@@ -96,4 +96,15 @@ export class Polygon {
       if ((ip.Y < pt.Y) !== (ipNext.Y < pt.Y)) {
         if (ip.X >= pt.X) {
           if (ipNext.X > pt.X)
-      
+            result = 1 - result;
+          else {
+            var d = (ip.X - pt.X) * (ipNext.Y - pt.Y) - (ipNext.X - pt.X) * (ip.Y - pt.Y);
+            if (d === 0)
+              return -1;
+            else if ((d > 0) === (ipNext.Y > ip.Y))
+              result = 1 - result;
+          }
+        }
+        else {
+          if (ipNext.X > pt.X) {
+            var d = (ip.X - pt.X) * (ipNext.Y - pt.Y) - (ipNext.X - pt
