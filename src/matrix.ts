@@ -36,4 +36,34 @@ export class Matrix {
         index = i
       }
     }
- 
+    return index
+  }
+
+  /**
+   * 连接两个矩阵
+   * 从底部连接
+   */
+  connect(b: Matrix) {
+    if (this.shape[1] !== b.shape[1]) {
+      throw new Error('Matrix column inconsistent')
+    }
+    let tmp = this.dataSync().concat(b.dataSync())
+    return new Matrix(tmp)
+  }
+
+  /**
+   * 返回新的归零矩阵
+   */
+  zeroed() {
+    return this.atomicOperation(_ => 0)
+  }
+
+  /**
+   * 克隆当前矩阵
+   */
+  clone() {
+    return new Matrix(this.dataSync())
+  }
+
+  /**
+   * 获取某一行
