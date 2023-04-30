@@ -91,4 +91,29 @@ export class Matrix {
    * 矩阵mxn每列求和
    * @returns Matrix 1 x n
    */
-  column
+  columnSum() {
+    let n = []
+    for (let i = 0; i < this.shape[1]; i++) {
+      n.push(this.getCol(i).reduce((p, c) => p + c))
+    }
+    return new Matrix([n])
+  }
+
+  /**
+   * 返回拷贝后的二维数组
+   */
+  dataSync() {
+    let n = []
+    for (let i = 0; i < this.shape[0]; i++) {
+      let m = []
+      for (let j = 0; j < this.shape[1]; j++) {
+        m.push(this.get(i, j))
+      }
+      n.push(m)
+    }
+    return n
+  }
+
+  /**
+   * 对比矩阵的形状
+ 
