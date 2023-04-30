@@ -116,4 +116,20 @@ export class Matrix {
 
   /**
    * 对比矩阵的形状
- 
+   * @param b 
+   */
+  equalsShape(b: Matrix) {
+    return this.shape[0] === b.shape[0] && this.shape[1] === b.shape[1]
+  }
+
+  /**
+   * 对比两个矩阵
+   * @param b 
+   */
+  equals(b: Matrix) {
+    if (!this.equalsShape(b)) {
+      return false
+    }
+    for (let i = 0; i < this.shape[0]; i++) {
+      for (let j = 0; j < this.shape[1]; j++) {
+        if (this.get(i, j) !== b.get(i, j)) ret
