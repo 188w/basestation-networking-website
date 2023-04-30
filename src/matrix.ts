@@ -132,4 +132,29 @@ export class Matrix {
     }
     for (let i = 0; i < this.shape[0]; i++) {
       for (let j = 0; j < this.shape[1]; j++) {
-        if (this.get(i, j) !== b.get(i, j)) ret
+        if (this.get(i, j) !== b.get(i, j)) return false
+      }
+    }
+    return true
+  }
+
+  /**
+   * 生成nxn单位矩阵
+   * @param row 
+   */
+  static generateIdentity(row: number) {
+    let t = this.generate(row, row, 0)
+    let col = 0
+    for (let n = 0; n < t.shape[0]; n++) {
+      t.update(n, col++, 1)
+    }
+    return t
+  }
+
+  /**
+   * 生成矩阵
+   * @param row 
+   * @param col 
+   * @param opt //默认为-0.5 ~ 0.5随机值
+   */
+  static gen
