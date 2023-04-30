@@ -66,4 +66,29 @@ export class Matrix {
   }
 
   /**
-   * 获取某一行
+   * 获取某一行的均值
+   * @param row
+   */
+  getMeanOfRow(row: number) {
+    let tmp = this.getRow(row)
+    return tmp.reduce((p, c) => p + c) / tmp.length
+  }
+
+  /**
+   * 矩阵所有值求和
+   */
+  sum() {
+    let s = 0
+    for (let i = 0; i < this.shape[0]; i++) {
+      for (let j = 0; j < this.shape[1]; j++) {
+        s += this.get(i, j)
+      }
+    }
+    return s
+  }
+
+  /**
+   * 矩阵mxn每列求和
+   * @returns Matrix 1 x n
+   */
+  column
