@@ -157,4 +157,14 @@ export class Matrix {
    * @param col 
    * @param opt //默认为-0.5 ~ 0.5随机值
    */
-  static gen
+  static generate(row: number, col: number, opt: GenerateMatrixOptions | number = { range: [-0.5, 0.5] }) {
+    let n = []
+    for (let i = 0; i < row; i++) {
+      let m = []
+      for (let j = 0; j < col; j++) {
+        let v = 0
+        if (typeof opt === 'number') {
+          v = opt
+        } else {
+          let [min, max] = [Math.min(...opt.range), Math.max(...opt.range)]
+          let 
