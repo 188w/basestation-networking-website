@@ -167,4 +167,24 @@ export class Matrix {
           v = opt
         } else {
           let [min, max] = [Math.min(...opt.range), Math.max(...opt.range)]
-          let 
+          let b = min < 0 || max < 0 ? -1 : 0
+          v = Math.random() * (max - min) + min + b
+          if (opt.integer) {
+            v = ~~v
+          }
+        }
+        m.push(v)
+      }
+      n.push(m)
+    }
+    return new Matrix(n)
+  }
+
+  /**
+   * 更新原矩阵
+   * @param row 
+   * @param col 
+   * @param val 
+   * @param oper 
+   */
+  update(row: number, col: number, val: number, oper?: '+
