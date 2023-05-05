@@ -209,4 +209,17 @@ export class Matrix {
   /**
    * 向矩阵上下左右追加一列/行
    * @param n 
-  
+   * @param position 
+   */
+  expand(n: number, position: 'L' | 'R' | 'T' | 'B') {
+    let m: number[][] = []
+    for (let i = 0; i < this.shape[0]; i++) {
+      let rows = position === 'L' ? [n, ...this.getRow(i)] :
+        position === 'R' ? [...this.getRow(i), n] : [...this.getRow(i)]
+      m.push(rows)
+    }
+
+    if (position === 'T') {
+      m.unshift(new Array<number>(m[0].length).fill(n))
+    } else if (position === 'B') {
+      m.pus
