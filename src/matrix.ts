@@ -187,4 +187,26 @@ export class Matrix {
    * @param val 
    * @param oper 
    */
-  update(row: number, col: number, val: number, oper?: '+
+  update(row: number, col: number, val: number, oper?: '+=' | '-=' | '*=' | '/=') {
+    switch (oper) {
+      case '+=':
+        this.self[row][col] += val
+        break
+      case '-=':
+        this.self[row][col] -= val
+        break
+      case '*=':
+        this.self[row][col] *= val
+        break
+      case '/=':
+        this.self[row][col] /= val
+        break
+      default:
+        this.self[row][col] = val
+    }
+  }
+
+  /**
+   * 向矩阵上下左右追加一列/行
+   * @param n 
+  
