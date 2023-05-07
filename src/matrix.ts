@@ -286,4 +286,18 @@ export class Matrix {
    * 克拉默法则: A-1 = adjA / detA
    */
   inverse() {
-    if (this.shape[0] !== this.shape[1]) throw
+    if (this.shape[0] !== this.shape[1]) throw new Error('只有方阵才能求逆')
+    let det = this.det()
+    if (det === 0) throw new Error('该矩阵不可逆')
+    let ad = this.adjugate()
+    return ad.atomicOperation(item => item / det)
+  }
+
+  /**
+   * 行列式计算
+   */
+  det() {
+    if (this.shape[0] !== this.shape[1]) throw new Error('只有方阵才能计算行列式')
+    if (this.shape[0] === 1) throw new Error('矩阵行必须大于1')
+    if (this.shape[0] === 2 && this.shape[1] === 2) {
+      return this.get(0, 0) * this.get(1, 1) - this.g
