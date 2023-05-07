@@ -251,4 +251,22 @@ export class Matrix {
    */
   getCol(col: number) {
     let n = []
-    for (let i = 0; i < this.shape[0]; i
+    for (let i = 0; i < this.shape[0]; i++) {
+      for (let j = 0; j < this.shape[1]; j++) {
+        if (j === col) {
+          n.push(this.get(i, j))
+        }
+      }
+    }
+    return n
+  }
+
+  /**
+   * 伴随矩阵
+   * - n阶：A(i,j) = (-1)^(i+j) * M(i,j)
+   * - 2阶：主对角线元素互换，副对角线元素变号
+   * - 1阶：伴随矩阵为一阶单位方阵
+   */
+  adjugate() {
+    if (this.shape[0] !== this.shape[1]) throw new Error('只有方阵才能求伴随矩阵')
+    if (this.shape[0] === 1) retu
