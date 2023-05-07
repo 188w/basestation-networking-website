@@ -222,4 +222,33 @@ export class Matrix {
     if (position === 'T') {
       m.unshift(new Array<number>(m[0].length).fill(n))
     } else if (position === 'B') {
-      m.pus
+      m.push(new Array<number>(m[0].length).fill(n))
+    }
+
+    return new Matrix(m)
+  }
+
+  /**
+   * 根据索引获取元素
+   * @param row 
+   * @param col 
+   */
+  get(row: number, col: number) {
+    return this.self[row][col]
+  }
+
+  /**
+   * 根据索引获取行
+   * @param row 
+   */
+  getRow(row: number) {
+    return [...this.self[row]]
+  }
+
+  /**
+   * 根据索引获取列
+   * @param col 
+   */
+  getCol(col: number) {
+    let n = []
+    for (let i = 0; i < this.shape[0]; i
