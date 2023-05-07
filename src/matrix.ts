@@ -269,4 +269,21 @@ export class Matrix {
    */
   adjugate() {
     if (this.shape[0] !== this.shape[1]) throw new Error('只有方阵才能求伴随矩阵')
-    if (this.shape[0] === 1) retu
+    if (this.shape[0] === 1) return new Matrix([[1]])
+    if (this.shape[0] === 2) {
+      return new Matrix([
+        [this.get(1, 1), this.get(0, 1) * -1],
+        [this.get(1, 0) * -1, this.get(0, 0)]
+      ])
+    }
+    return this.clone().atomicOperation((_, r, c) =>
+      this.cominor(r, c).det() * ((-1) ** (r + c + 2))
+    ).T
+  }
+
+  /**
+   * 矩阵的逆  
+   * 克拉默法则: A-1 = adjA / detA
+   */
+  inverse() {
+    if (this.shape[0] !== this.shape[1]) throw
