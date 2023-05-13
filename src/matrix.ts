@@ -355,4 +355,22 @@ export class Matrix {
     }
     let n = []
     for (let i = 0; i < this.shape[0]; i++) {
-      let 
+      let m = []
+      for (let j = 0; j < this.shape[1]; j++) {
+        let [x, y] = [this.get(i, j), b.get(i, j)]
+        let c = oper === 'add' ? x + y :
+          oper === 'sub' ? x - y :
+            oper === 'mul' ? x * y :
+              oper === 'exp' ? x / y : x
+        m.push(c)
+      }
+      n.push(m)
+    }
+    return new Matrix(n)
+  }
+
+  /**
+   * 减法
+   * @param b 
+   */
+  subtrac
