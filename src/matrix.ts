@@ -319,4 +319,22 @@ export class Matrix {
    * @param col 列
    */
   cominor(row: number, col: number) {
-    if (this.shape[0] < 2 || t
+    if (this.shape[0] < 2 || this.shape[1] < 2) {
+      throw new Error('求余子式行和列必须大于2才有意义')
+    }
+    let n = this.dataSync().map((v) => {
+      v = v.filter((_, j) => j !== col)
+      return v
+    }).filter((_, i) => i !== row)
+    return new Matrix(n)
+  }
+
+  /**
+   * 矩阵元素的原子操作
+   * @param callback 
+   */
+  atomicOperation(callback: (item: number, row: number, col: number) => number) {
+    let n = []
+    for (let i = 0; i < this.shape[0]; i++) {
+      let m = []
+      for (let j =
