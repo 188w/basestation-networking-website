@@ -300,4 +300,23 @@ export class Matrix {
     if (this.shape[0] !== this.shape[1]) throw new Error('只有方阵才能计算行列式')
     if (this.shape[0] === 1) throw new Error('矩阵行必须大于1')
     if (this.shape[0] === 2 && this.shape[1] === 2) {
-      return this.get(0, 0) * this.get(1, 1) - this.g
+      return this.get(0, 0) * this.get(1, 1) - this.get(0, 1) * this.get(1, 0)
+    } else {
+      let m = 0
+      //默认按照第一行的余因子展开计算
+      for (let i = 0; i < this.shape[1]; i++) {
+        if (this.get(0, i) !== 0) {
+          m += this.get(0, i) * ((-1) ** (i + 2)) * this.cominor(0, i).det()
+        }
+      }
+      return m
+    }
+  }
+
+  /**
+   * 筛选余子式矩阵
+   * @param row 行
+   * @param col 列
+   */
+  cominor(row: number, col: number) {
+    if (this.shape[0] < 2 || t
