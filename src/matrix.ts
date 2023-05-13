@@ -337,4 +337,22 @@ export class Matrix {
     let n = []
     for (let i = 0; i < this.shape[0]; i++) {
       let m = []
-      for (let j =
+      for (let j = 0; j < this.shape[1]; j++) {
+        m.push(callback(this.get(i, j), i, j))
+      }
+      n.push(m)
+    }
+    return new Matrix(n)
+  }
+
+  /**
+   * 同位操作
+   * @param b 
+   */
+  coLocationOperation(b: Matrix, oper: 'add' | 'sub' | 'mul' | 'exp') {
+    if (!this.equalsShape(b)) {
+      throw new Error('必须满足两个矩阵是同形矩阵')
+    }
+    let n = []
+    for (let i = 0; i < this.shape[0]; i++) {
+      let 
