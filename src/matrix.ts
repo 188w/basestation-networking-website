@@ -373,4 +373,25 @@ export class Matrix {
    * 减法
    * @param b 
    */
-  subtrac
+  subtraction(b: Matrix) {
+    return this.coLocationOperation(b, 'sub')
+  }
+
+  /**
+   * 加法
+   * @param b 
+   */
+  addition(b: Matrix) {
+    return this.coLocationOperation(b, 'add')
+  }
+
+  /**
+   * 矩阵乘法 ｜ 数乘
+   * @param b 
+   */
+  multiply(b: Matrix | number) {
+    if (typeof b === 'number') {
+      return this.atomicOperation(item => item * b)
+    }
+    if (this.shape[1] !== b.shape[0]) {
+      throw new
