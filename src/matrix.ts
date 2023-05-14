@@ -434,4 +434,15 @@ export class Matrix {
    * - X' = X - min / range  0 ~ 1
    * @returns [归一化矩阵, 缩放比矩阵]
    */
-  normalization(type: 'average' | 'min' = 
+  normalization(type: 'average' | 'min' = 'average') {
+    let t = this.T
+    let n = []
+    for (let i = 0; i < t.shape[0]; i++) {
+      let max = Math.max(...t.getRow(i))
+      let min = Math.min(...t.getRow(i))
+      let range = max - min
+      let average = min + (range / 2)
+      let temp = type === 'average' ? average : min
+      n.push([temp, range])
+      for (let j = 0; j < t.shape[1]; j++) {
+        let s = range === 0 ? 0 : (t.g
