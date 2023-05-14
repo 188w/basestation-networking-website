@@ -414,4 +414,24 @@ export class Matrix {
   }
 
   /**
-   * 
+   * 专置
+   */
+  get T() {
+    let a = []
+    for (let i = 0; i < this.shape[1]; i++) {
+      let n = []
+      for (let j = 0; j < this.shape[0]; j++) {
+        n.push(this.get(j, i))
+      }
+      a.push(n)
+    }
+    return new Matrix(a)
+  }
+
+  /**
+   * 特征缩放  
+   * - X' = X - average / range  -0.5 ~ 0.5
+   * - X' = X - min / range  0 ~ 1
+   * @returns [归一化矩阵, 缩放比矩阵]
+   */
+  normalization(type: 'average' | 'min' = 
