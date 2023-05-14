@@ -394,4 +394,24 @@ export class Matrix {
       return this.atomicOperation(item => item * b)
     }
     if (this.shape[1] !== b.shape[0]) {
-      throw new
+      throw new Error('当矩阵A的列数等于矩阵B的行数，A与B才可以相乘')
+    }
+    let row = this.shape[0]
+    let col = b.shape[1]
+    let bt = b.T
+    let n = []
+    for (let i = 0; i < row; i++) {
+      let m = []
+      for (let k = 0; k < col; k++) {
+        let tm = this.getRow(i).reduce((p, c, j) => {
+          return p + c * bt.get(k, j)
+        }, 0)
+        m.push(tm)
+      }
+      n.push(m)
+    }
+    return new Matrix(n)
+  }
+
+  /**
+   * 
