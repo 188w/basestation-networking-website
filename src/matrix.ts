@@ -445,4 +445,21 @@ export class Matrix {
       let temp = type === 'average' ? average : min
       n.push([temp, range])
       for (let j = 0; j < t.shape[1]; j++) {
-        let s = range === 0 ? 0 : (t.g
+        let s = range === 0 ? 0 : (t.get(i, j) - temp) / range
+        t.update(i, j, s)
+      }
+    }
+    return [t.T, new Matrix(n).T]
+  }
+
+  /**
+   * 格式化输出
+   */
+  print() {
+    console.log(`Matrix ${this.shape[0]}x${this.shape[1]} [`)
+    for (let i = 0; i < this.shape[0]; i++) {
+      let line = ' '
+      for (let j = 0; j < this.shape[1]; j++) {
+        line += this.get(i, j) + ', '
+      }
+      console.
