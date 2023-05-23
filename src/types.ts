@@ -7,4 +7,22 @@ export type ActivationFunction = 'Sigmoid' | 'Relu' | 'Tanh' | 'Softmax'
 export type Mode = 'sgd' | 'bgd' | 'mbgd'
 
 /**网络形状*/
-export ty
+export type NetShape = [number, (number | [number, ActivationFunction]), ...(number | [number, ActivationFunction])[]]
+
+/**模型配置*/
+export interface BPNetOptions {
+  mode?: Mode
+  rate?: number
+  w?: Matrix[]
+  b?: Matrix[]
+  scale?: Matrix
+}
+
+/**训练配置*/
+export interface TrainingOptions {
+  epochs: number
+  batchSize: number
+  /**是否异步训练*/
+  async: boolean
+  onBatch?: (batch: number, size: number, loss: number) => void
+  onEp
