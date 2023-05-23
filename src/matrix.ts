@@ -462,4 +462,8 @@ export class Matrix {
       for (let j = 0; j < this.shape[1]; j++) {
         line += this.get(i, j) + ', '
       }
-      console.
+      console.log(line)
+    }
+    console.log(']')
+  }
+}
