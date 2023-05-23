@@ -25,4 +25,21 @@ export interface TrainingOptions {
   /**是否异步训练*/
   async: boolean
   onBatch?: (batch: number, size: number, loss: number) => void
-  onEp
+  onEpoch?: (epoch: number, loss: number) => void
+  onTrainEnd?: (loss: number) => void
+}
+
+export interface RNNOptions {
+  trainData: string[]
+  rate?: number
+}
+
+export interface RNNTrainingOptions {
+  epochs?: number
+  onEpochs?: (epoch: number, loss: number) => void
+}
+
+export interface RNNForwardResult {
+  st: Matrix
+  yt: Matrix
+}
