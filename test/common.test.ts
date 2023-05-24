@@ -12,4 +12,16 @@ describe('test -> 工具函数', () => {
   })
 
   test('imageDataToMatrix', () => {
-  
+    let imageData = {
+      width: 2,
+      height: 3,
+      data: new Array(2 * 3 * 4).fill(0).map((_, k) => k)
+    } as any
+    let mat = imageDataToMatrix(imageData, 'g')
+    expect(mat.equals(new Matrix([
+      [1, 5],
+      [9, 13],
+      [17, 21]
+    ]))).toBeTruthy()
+  })
+})
