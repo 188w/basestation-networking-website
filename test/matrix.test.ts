@@ -67,3 +67,63 @@ describe('test -> Matrix', () => {
   })
 
   test('矩阵增列', () => {
+    let a = new Matrix([
+      [1, 2, 3],
+      [4, 5, 6]
+    ])
+    let aexp = new Matrix([
+      [1, 2, 3, 0],
+      [4, 5, 6, 0]
+    ])
+    expect(a.expand(0, 'R').equals(aexp)).toBeTruthy()
+  })
+
+  test('加法', () => {
+    let a = new Matrix([
+      [1, 2, 3],
+      [4, 5, 6]
+    ])
+    let b = new Matrix([
+      [1, 1, 1],
+      [1, 1, 1]
+    ])
+    let ab = new Matrix([
+      [2, 3, 4],
+      [5, 6, 7]
+    ])
+    expect(a.addition(b).equals(ab)).toBeTruthy()
+  })
+
+  test('列求和', () => {
+    let a = new Matrix([
+      [1, 2, 3],
+      [4, 5, 6]
+    ])
+    let ab = new Matrix([
+      [5, 7, 9]
+    ])
+    expect(a.columnSum().equals(ab)).toBeTruthy()
+  })
+
+  test('矩阵的逆', () => {
+    let a = new Matrix([
+      [0, 1, 2],
+      [1, 0, 3],
+      [4, -3, 8]
+    ])
+    expect(a.inverse().equals(new Matrix([
+      [-4.5, 7, -1.5],
+      [-2, 4, -1],
+      [1.5, -2, 0.5]
+    ]))).toBeTruthy()
+
+    let b = new Matrix([
+      [3, 4],
+      [5, 6]
+    ])
+    expect(b.inverse().equals(new Matrix([
+      [-3, 2],
+      [2.5, -1.5]
+    ]))).toBeTruthy()
+  })
+})

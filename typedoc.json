@@ -1,0 +1,8 @@
+{
+  "out": "docs/api/",
+  "entryPoints": [
+    "src/index.ts"
+  ],
+  "theme": "default",
+  "includeVersion": true
+}
